@@ -7,7 +7,8 @@
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kaaunty&show_icons=true&theme=tokyonight)
 
 ##🌱 Estou aprendendo:
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" width="40" height="40"/>         
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="70" height="70"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" width="70" height="70"/>         
 
 ## Tecnologias que eu uso no meu dia.
 
