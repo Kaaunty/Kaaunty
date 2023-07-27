@@ -20,4 +20,5 @@ Apaixonado por tecnologia, e por ajudar pessoas através da programação.
 <a href = "mailto:contato@seu-usuário-aqui"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/kauã-freitass" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
 </div>
+
 <img align="center" alt="coca-anime"  src="https://cdn.discordapp.com/attachments/556725933201948675/1033576515457273877/e811c1f38c07106b6ca9a4492cd6d32a.gif">
