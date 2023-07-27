@@ -1,8 +1,13 @@
 # Olá Eu sou o Kauã Freitas✌️
+## Bem vindo ao meu perfil GitHub 👋
+
 
 [![Blog](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kauã-freitass)[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/kaauafreitas/)
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kaaunty&show_icons=true&theme=tokyonight)
+
+##🌱 Estou aprendendo:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />         
 
 ## Tecnologias que eu uso no meu dia.
 
