@@ -2,14 +2,10 @@
 #Bem vindo ao meu perfil GitHub 👋
 
 ## Estou aprendendo:
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="70" height="70"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" width="70" height="70"/>         
-
-## Tecnologias que eu uso no meu dia.
-
 <div style= "display:inline_block"><br/> 
- <img align="center "alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="70" height="70"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" width="70" height="70"/>         
 </div>
+
 Apaixonado por tecnologia, e por ajudar pessoas através da programação.
 <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kaaunty&layout=compact&langs_count=7&theme=dracula"/>
 ## Contatos:
