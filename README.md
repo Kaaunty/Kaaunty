@@ -1,8 +1,6 @@
 # Olá Eu sou o Kauã Freitas✌️
 #Bem vindo ao meu perfil GitHub 👋
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kaaunty&show_icons=true&theme=tokyonight)
-
 ## Estou aprendendo:
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="70" height="70"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" width="70" height="70"/>         
