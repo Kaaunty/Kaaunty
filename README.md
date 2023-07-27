@@ -7,6 +7,7 @@
 </div>
 
 Apaixonado por tecnologia, e por ajudar pessoas através da programação.
+
 <img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kaaunty&layout=compact&langs_count=7&theme=dracula"/>
 ## Contatos:
 <div>
