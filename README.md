@@ -21,3 +21,5 @@ Contatos:
 </div>
 
 <img align="center" alt="coca-anime"  src="https://cdn.discordapp.com/attachments/556725933201948675/1033576515457273877/e811c1f38c07106b6ca9a4492cd6d32a.gif">
+
+![snake gif](https://github.com/Kaaunty/Kaaunty/blob/output/github-snake-dark.svg)
