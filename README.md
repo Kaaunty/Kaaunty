@@ -12,7 +12,6 @@ Bem vindo ao meu perfil GitHub 👋
 
 Apaixonado por tecnologia, e por ajudar pessoas através da programação.
 
-<img loading="lazy" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kaaunty&layout=compact&langs_count=7&theme=dracula"/>
 Contatos:
 <div>
 <a href="https://www.instagram.com/kaauafreitas/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
