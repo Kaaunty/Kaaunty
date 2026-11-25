@@ -27,7 +27,7 @@ const rest = async p => (await fetch('https://api.github.com' + p, { headers: to
 
 // ---------- dados ----------
 const data = await gql(`{ user(login:"${USER}") { name bio location avatarUrl followers{totalCount}
-  repositories(ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, first:30, orderBy:{field:PUSHED_AT,direction:DESC}){ totalCount nodes{ name description stargazerCount primaryLanguage{name} } }
+  repositories(ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, first:30, orderBy:{field:PUSHED_AT,direction:DESC}){ totalCount nodes{ name description stargazerCount primaryLanguage{name} languages(first:8, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name } } } } }
   contributionsCollection{ totalCommitContributions totalPullRequestContributions contributionCalendar{ totalContributions weeks{ contributionDays{ contributionCount date } } } } } }`);
 const u = data.user;
 const repos = u.repositories.nodes.filter(r => r.name !== USER);
@@ -223,6 +223,33 @@ ${avatar ? `<rect x="570" y="22" width="108" height="108" fill="#fff"/><image hr
   const items = [[cc.totalCommitContributions, 'COMMITS'], [cc.totalPullRequestContributions, 'PULL REQS'], [stars, 'STARS'], [best + 'D', 'BEST STREAK']];
   const cols = items.map(([v, l], i) => `<g class="fi" style="animation-delay:${i * .1}s"><text x="${30 + i * 160}" y="50" font-size="46" fill="#f0f6fc">${esc(v)}</text><text x="${30 + i * 160}" y="76" font-size="17" fill="#6b7787" letter-spacing="1">${l}</text></g>`).join('');
   writeFileSync(OUT + 'stats.svg', CARD(700, 96, `${card(.5, .5, 699, 95)}${cols}`));
+}
+
+// tools (linguagens por bytes de codigo publico)
+{
+  const bytes = {};
+  for (const r of u.repositories.nodes) for (const e of r.languages?.edges || []) bytes[e.node.name] = (bytes[e.node.name] || 0) + e.size;
+  const sum = Object.values(bytes).reduce((a, b) => a + b, 0) || 1;
+  const top = Object.entries(bytes).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([n, b]) => [n, (b / sum) * 100]);
+  const AB = { TypeScript: 'TS', JavaScript: 'JS', 'C#': 'C#', Python: 'PY', CSS: 'CS', HTML: 'HT', Shell: 'SH', Go: 'GO', Dockerfile: 'DK' };
+  const lum = c => { const n = parseInt(c.slice(1), 16); return ((n >> 16) * 299 + ((n >> 8) & 255) * 587 + (n & 255) * 114) / 1000; };
+  const rows = Math.ceil(top.length / 4), H = 112 + rows * 96 + 44;
+  const cells = top.map(([n, pct], i) => {
+    const x = 34 + (i % 4) * 160, y = 116 + Math.floor(i / 4) * 96, c = langColor(n), tc = lum(c) > 150 ? '#101a10' : '#ffffff';
+    const label = pct < 1 ? '<1' : Math.round(pct), bw = Math.max(3, Math.round(pct * 1.3));
+    return `<g class="fi" style="animation-delay:${i * .1}s">
+<rect x="${x}" y="${y}" width="30" height="30" fill="${c}"/><rect x="${x}" y="${y}" width="3" height="3" fill="#0d1117"/><rect x="${x + 27}" y="${y}" width="3" height="3" fill="#0d1117"/><rect x="${x}" y="${y + 27}" width="3" height="3" fill="#0d1117"/><rect x="${x + 27}" y="${y + 27}" width="3" height="3" fill="#0d1117"/>
+<text x="${x + 15}" y="${y + 20}" font-family="${FONT2}" font-size="10" fill="${tc}" text-anchor="middle">${esc(AB[n] || n.slice(0, 2).toUpperCase())}</text>
+<text x="${x}" y="${y + 54}" font-size="21" fill="#f0f6fc">${esc(n)}</text>
+<text x="${x}" y="${y + 70}" font-size="15" fill="#6b7787">${esc(label)}% of public code</text>
+<rect x="${x}" y="${y + 77}" width="130" height="4" fill="#1f2a37"/><rect class="bar" style="animation-delay:${.3 + i * .1}s" x="${x}" y="${y + 77}" width="${bw}" height="4" fill="${c}"/></g>`;
+  }).join('');
+  const foot = top.map(t => t[0]).join(' · ');
+  writeFileSync(OUT + 'tools.svg', CARD(700, H, `${card(.5, .5, 699, H - 1)}
+<text x="34" y="40" font-size="15" fill="#6b7787" letter-spacing="3">TECHNOLOGY SPECTRUM</text>
+<text x="34" y="74" font-family="${FONT2}" font-size="14" fill="#3ddc84"><tspan class="bl">&gt;</tspan> THE TOOLS BEHIND THE WORK</text>
+<line x1="34" y1="90" x2="666" y2="90" stroke="#1f2a37" stroke-dasharray="3 3"/>${cells}
+<text x="350" y="${H - 18}" font-size="16" fill="#8b98a8" text-anchor="middle">${esc(foot)}</text>`, '.bar{transform-box:fill-box;transform-origin:0 50%;animation:gw 1s ease-out both}@keyframes gw{from{transform:scaleX(0)}}'));
 }
 
 // projects

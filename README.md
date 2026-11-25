@@ -7,4 +7,5 @@
 <img src="assets/about.svg" alt="Sobre" width="100%"/>
 <img src="assets/stats.svg" alt="Números" width="100%"/>
 <img src="assets/projects.svg" alt="Projetos" width="100%"/>
+<img src="assets/tools.svg" alt="Tecnologias" width="100%"/>
 <img src="assets/activity.svg" alt="Atividade" width="100%"/>
