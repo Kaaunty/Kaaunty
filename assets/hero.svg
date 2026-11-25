@@ -36,8 +36,8 @@
 <text x="70" y="9.9" font-family="P2P,monospace" font-size="3.6" text-anchor="middle" fill="#1b1b22">KAUÃ FREITAS</text>
 <!-- relógio -->
 <circle cx="118" cy="12" r="6" fill="#0e0e14"/><circle cx="118" cy="12" r="5" fill="#f3e7c9"/>
-<g stroke="#1b1b22" stroke-linecap="round"><line class="hand h" x1="118" y1="12" x2="118" y2="9" stroke-width=".9" style="transform:rotate(337.5deg)"/>
-<line class="hand m" x1="118" y1="12" x2="118" y2="8" stroke-width=".6" style="transform:rotate(90deg)"/></g>
+<g stroke="#1b1b22" stroke-linecap="round"><line class="hand h" x1="118" y1="12" x2="118" y2="9" stroke-width=".9" style="transform:rotate(338.5deg)"/>
+<line class="hand m" x1="118" y1="12" x2="118" y2="8" stroke-width=".6" style="transform:rotate(102deg)"/></g>
 <!-- luz da lâmpada -->
 <polygon class="glow" points="50,29 36,58 62,58 56,29" fill="#ffe27a" opacity=".12"/>
 <!-- estantes -->
